@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Camera, CameraView } from 'expo-camera';
 import { Ionicons } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // Importar AsyncStorage
-import { supabase } from './supabase'; // Importar o cliente do Supabase
+import AsyncStorage from '@react-native-async-storage/async-storage'; 
+import { supabase } from './supabase'; 
 
 export default function CameraScreen() {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
@@ -28,11 +28,11 @@ export default function CameraScreen() {
       const photo = await cameraRef.current.takePictureAsync();
       console.log('Photo URI:', photo.uri);
   
-      // Recuperar a lista de fotos existente do AsyncStorage
+      
       let photos = await AsyncStorage.getItem('photos');
       photos = photos ? JSON.parse(photos) : [];
   
-      // Verifique se 'photos' é uma lista antes de adicionar a nova foto
+      
       if (Array.isArray(photos)) {
         photos.push(photo.uri);
       } else {
@@ -41,17 +41,17 @@ export default function CameraScreen() {
 
       }
   
-      // Armazenar a lista atualizada de fotos no AsyncStorage
+      
       await AsyncStorage.setItem('photos', JSON.stringify(photos));
   
       console.log('Photo saved in AsyncStorage');
-       // Obter a extensão do arquivo
+       
        const ext = photo.uri.substring(photo.uri.lastIndexOf('.') + 1);
 
-       // Obter o nome do arquivo
+       
        const fileName = photo.uri.replace(/^.*[\\\/]/, '');
 
-      // Upload para o bucket de imagens do Supabase
+      
       const { data, error } = await supabase.storage
         .from('image-bucket')
         .upload(fileName, {
