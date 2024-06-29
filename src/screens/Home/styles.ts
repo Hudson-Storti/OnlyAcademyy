@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     left: 20,
     zIndex: 1,
     backgroundColor: '#FFFFFF',
-    padding: 10,
+    padding: 15,
     borderRadius: 50,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },

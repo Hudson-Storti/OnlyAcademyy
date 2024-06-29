@@ -211,7 +211,7 @@
  
        <Text style={styles.mainText}>@Fernando_Ensina</Text>
        <Text style={styles.subText}>
-         {"   Desenvolvedor de Apps | Expo Expert\n   Criando experiências incríveis com Expo e React Native.\n   JS, TS, Redux, Firebase.\n   UI intuitiva e UX excepcional."}
+         {"   Desenvolvedor de Apps | Expo Expert\n   Criando apps incríveis com Expo e React Native.\n   JS, TS, Redux, Firebase.\n   UI intuitiva e UX excepcional."}
        </Text>
  
        <View style={styles.buttonRow}>
