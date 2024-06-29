@@ -209,18 +209,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
   },
-  subscriptionButton: {
-    position: 'absolute',
-    top: 100,
-    right: 10,
-    backgroundColor: 'white',
-    borderRadius: 25,
-    padding: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.5,
-    shadowRadius: 2,
-    elevation: 5,
+  pagamento: {
+    width: '10%',
+    height: '10%',
+    resizeMode: 'cover',
+    marginLeft: '80%',
+    padding: 30,
+    marginTop: '-45%'
   },
   subscriptionModalContainer: {
     flex: 1,

@@ -123,9 +123,12 @@
        </TouchableOpacity>
  
        <TouchableOpacity 
-         style={styles.subscriptionButton}
          onPress={() => setSubscriptionModalVisible(true)}
        >
+         <Image
+           source={require('./assets/pagamento.png')}
+           style={styles.pagamento}
+         />
          <Ionicons name="ios-card" size={32} color="black" />
        </TouchableOpacity>
  
